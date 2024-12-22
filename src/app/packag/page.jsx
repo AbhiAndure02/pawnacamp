@@ -35,7 +35,7 @@ function Packages() {
     },
     {
       name: "Cottage",
-      price: 2100,
+      price: 2900,
       features: [
         "Cozy wooden interiors",
         "Private restroom",

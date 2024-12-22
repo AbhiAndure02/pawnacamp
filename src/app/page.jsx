@@ -7,7 +7,7 @@ import Advertisement from "./(componets)/Advertise";
 export default function Home() {
   const handleWhatsAppClick = () => {
     const phoneNumber = "+917040504738"; // Replace with the phone number
-    const message = encodeURIComponent("Hi, I am enquiring about booking from your website camping at pawna lake  ."); // Encode the message for URL
+    const message = encodeURIComponent("Hi, I am enquiring about booking from your website camping at pawna lake ."); // Encode the message for URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank"); // Open WhatsApp in a new tab
   };
@@ -34,7 +34,9 @@ export default function Home() {
             Experience the tranquility of nature, enjoy stunning views, and immerse yourself in the serenity
             of camping by the lake. Perfect for relaxation, adventure, and unforgettable memories.
           </p>
-          <div className="flex gap-4 items-center justify-center">
+          
+          {/* Buttons Section */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link href="/booking" className="p-3 bg-blue-700 text-white rounded-md m-2">
               Book Now
             </Link>

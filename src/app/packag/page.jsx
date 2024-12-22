@@ -5,6 +5,19 @@ import Link from "next/link";
 function Packages() {
   const packages = [
     {
+      name: "31st Celebration",
+      price: 2000,
+      features: [
+        "Check-in at 3 PM",
+        "Evening Welcome Tea/Coffee & Pakoda",
+        " Buffet Dinner (Veg & Non-Veg Options)",
+        " Live Music & DJ Night",
+        "Breakfast (Poha, Upma, Bread Omelette, Tea, Coffee)",
+        "Parking, Common Toilets, and First Aid Kit",
+      ],
+      image: "/images/thrty.jpeg",
+    },
+    {
       name: "Standard Tent",
       price: 999,
       features: [
@@ -15,9 +28,7 @@ function Packages() {
         "Bonfire",
         "Sports activities",
         "Live music on Saturday",
-        "Option in Breakfast",
-        "Free Parking",
-        "Neat and clean washrooms"
+     
       ],
       image: "/images/18.jpeg", // Replace with relevant images from your gallery
     },
@@ -45,6 +56,7 @@ function Packages() {
       ],
       image: "/images/cotage.jpeg",
     },
+
    
   ];
 
@@ -70,7 +82,7 @@ function Packages() {
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">{pkg.name}</h2>
               <p className="text-gray-600 font-semibold mb-4">
-                Price: ₹{pkg.price}
+                Starting At just: ₹{pkg.price}
               </p>
 
               {/* Features */}

@@ -20,24 +20,27 @@ export default function Advertisement() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-500 to-gray-200 py-8">
+    <div className="bg-gradient-to-b from-purple-600 to-blue-400 py-12 px-4">
       {/* Header */}
-      <div className="text-center animate-fadeInUp">
-        <h2 className="text-xl md:text-2xl font-bold text-blue-900">
+      <div className="text-center animate-fadeInUp mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
           31st December Big Event & Live Music New Year Party Celebration
         </h2>
+        <p className="text-lg text-white mt-4 max-w-3xl mx-auto">
+          Join us for a fun-filled evening with great food, live music, and exciting activities at Pawna Lake!
+        </p>
       </div>
 
       {/* Image and Details */}
-      <div className="container mx-auto mt-6 animate-zoomIn">
+      <div className="container mx-auto mt-6 animate-zoomIn mb-8">
         <div className="flex flex-wrap justify-center">
           {/* Main Advertisement Image */}
-          <div className="relative w-full max-w-lg md:max-w-3xl rounded-lg overflow-hidden shadow-md">
+          <div className="relative w-full max-w-lg md:max-w-3xl rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/images/offer.jpeg"
+              src="/images/thrty.jpeg"
               alt="Camping Offer"
               layout="responsive"
-              width={700}
+              width={800}
               height={300}
               className="rounded-lg"
             />
@@ -46,29 +49,37 @@ export default function Advertisement() {
       </div>
 
       {/* Pricing and Package Details */}
-      <div className="mt-6 text-center animate-fadeInUp">
-        <div className="text-orange-500 text-2xl font-bold">
-          Starting at <span className="text-black">₹1999</span> per person
+      <div className="mt-6 text-center animate-fadeInUp text-white">
+        <div className="text-3xl font-bold text-orange-500">
+          Starting at <span className="text-black">₹2000</span> per person
         </div>
-        <div className="mt-4 text-lg font-semibold">Package Inclusions:</div>
-        <ul className="mt-2 text-gray-700 space-y-2">
-          <li>⏰ Check-in 3 PM</li>
-          <li>🥞 Breakfast</li>
-          <li>🍖 Unlimited Dinner & BBQ</li>
+        <div className="mt-4 text-lg font-semibold">
+          <span className="underline">Package Inclusions:</span>
+        </div>
+        <ul className="mt-4 text-lg space-y-2 text-white mx-auto max-w-2xl">
+          <li>⏰ Check-in at 3 PM</li>
+          <li>🍖 Evening Welcome Tea/Coffee & Pakoda</li>
+          <li>🎮 Free Indoor Games Available</li>
+          <li>🍢 Paneer Chilli & Chicken Chilli BBQ (250g) at 8 PM</li>
+          <li>🍽️ Buffet Dinner (Veg & Non-Veg Options)</li>
+          <li>🎶 Live Music & DJ Night</li>
+          <li>🔥 Bonfire</li>
+          <li>🥞 Breakfast (Poha, Upma, Bread Omelette, Tea, Coffee)</li>
+          <li>🚗 Parking, Common Toilets, and First Aid Kit</li>
         </ul>
       </div>
 
       {/* Call to Action */}
-      <div className="mt-6 flex justify-center gap-6 animate-fadeInUp">
+      <div className="mt-8 flex flex-col sm:flex-row justify-center gap-6 animate-fadeInUp">
         <a
-          href="tel:+917040504738" // Link to initiate a phone call
-          className="px-6 py-3 bg-green-600 text-white rounded-lg font-bold shadow-md hover:bg-green-700 transition-all duration-300 transform hover:scale-105"
+          href="tel:+917040504738"
+          className="px-6 py-3 bg-green-600 text-white rounded-lg font-bold shadow-md hover:bg-green-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
         >
           Call: 7040504738
         </a>
         <button
-          onClick={handleBookNow} // Trigger the navigation to the booking page
-          className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+          onClick={handleBookNow}
+          className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
         >
           Book Now
         </button>

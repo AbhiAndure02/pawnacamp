@@ -1,7 +1,24 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Use `next/navigation` for app directory in Next.js 13+
+import { useEffect, useState } from "react";
 
 export default function Advertisement() {
+  const [isClient, setIsClient] = useState(false); // State to track if the component is client-side
+  const router = useRouter();
+
+  // Set isClient to true when the component mounts (client-side only)
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const handleBookNow = () => {
+    // Ensure we are on the client-side before calling the router
+    if (isClient) {
+      router.push('/booking'); // Adjust the URL to match your actual booking page route
+    }
+  };
+
   return (
     <div className="bg-gradient-to-b from-gray-500 to-gray-200 py-8">
       {/* Header */}
@@ -43,11 +60,17 @@ export default function Advertisement() {
 
       {/* Call to Action */}
       <div className="mt-6 flex justify-center gap-6 animate-fadeInUp">
-        <button className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
-          Book Now
-        </button>
-        <button className="px-6 py-3 bg-green-600 text-white rounded-lg font-bold shadow-md hover:bg-green-700 transition-all duration-300 transform hover:scale-105">
+        <a
+          href="tel:+917040504738" // Link to initiate a phone call
+          className="px-6 py-3 bg-green-600 text-white rounded-lg font-bold shadow-md hover:bg-green-700 transition-all duration-300 transform hover:scale-105"
+        >
           Call: 7040504738
+        </a>
+        <button
+          onClick={handleBookNow} // Trigger the navigation to the booking page
+          className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+        >
+          Book Now
         </button>
       </div>
     </div>

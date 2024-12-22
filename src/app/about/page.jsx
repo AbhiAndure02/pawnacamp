@@ -64,6 +64,16 @@ function page() {
           getaway awaits!
         </p>
       </div>
+
+      {/* Call to Action */}
+      <div className="mt-8 flex justify-center gap-6">
+        <button className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg font-bold shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+          Book Now
+        </button>
+        <button className="w-full sm:w-auto px-6 py-3 bg-green-600 text-white rounded-lg font-bold shadow-md hover:bg-green-700 transition-all duration-300 transform hover:scale-105">
+          Call Us Now
+        </button>
+      </div>
     </div>
   );
 }

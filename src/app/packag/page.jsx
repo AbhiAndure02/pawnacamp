@@ -6,7 +6,7 @@ function Packages() {
   const packages = [
     {
       name: "31st Celebration",
-      price: 2000,
+      price: 1499,
       features: [
         "Check-in at 3 PM",
         "Evening Welcome Tea/Coffee & Pakoda",

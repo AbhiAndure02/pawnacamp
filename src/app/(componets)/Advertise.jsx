@@ -51,7 +51,7 @@ export default function Advertisement() {
       {/* Pricing and Package Details */}
       <div className="mt-6 text-center animate-fadeInUp text-white">
         <div className="text-3xl font-bold text-orange-500">
-          Starting at <span className="text-black">₹2000</span> per person
+          Starting at <span className="text-black">1499</span> per person
         </div>
         <div className="mt-4 text-lg font-semibold">
           <span className="underline">Package Inclusions:</span>
